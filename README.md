@@ -13,6 +13,7 @@ I chose the following
 - [Radio Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
 - [If ...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
-- [className (to set class)](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+- [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+- [Usage of className to remove classes on elements](https://bobbyhadz.com/blog/javascript-remove-all-classes-from-element)
 - [Google Fonts](https://fonts.google.com/)
     - [Roboto](https://fonts.google.com/specimen/Roboto)

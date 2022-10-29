@@ -1,46 +1,19 @@
 :root {
-  --hue: 0;
-  --hue2: calc(var(--hue) + 60);
+  /* Radio Button Color */
+  --radio-color: blue;
+}
 
-  --dark: hsl(var(--hue), 59%, 26%);
-  --light: hsl(var(--hue2), 60%, 92%);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.base {
-  background-color: blue;
-  color: red;
-}
-
-.dark-theme {
-  background-color: black;
-  color: white;
-}
-
-.light-theme {
-  background-color: peachpuff;
-  color: black;
-}
-
-.colorful-theme {
-  background-color: pink;
-  color: black;
-}
-
-body.light {
-  color: var(--dark);
-  background-color: var(--light);
-}
-
-body.dark {
-  color: var(--light);
-  background-color: var(--dark);
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 main {
@@ -54,29 +27,85 @@ main {
   min-height: 100vh;
 }
 
-input[type=checkbox] {
-  display: none;
+/* Color Themes */
+.base {
+  background-color: peachpuff;
+  color: blue;
 }
 
-label[for=dark-mode] {
-  display: block;
-  border: 2px solid brown;
-  border-radius: .5em;
-  padding: .5em 1em;
-
-  color: brown;
-  background: #eee;
+.dark-theme {
+  background-color: black;
+  color: white;
 }
 
-label[for=dark-mode]:hover {
-  background: white;
+.light-theme {
+  background-color: lightgray;
+  color: #d00;
 }
 
-label[for=dark-mode]:active {
-  color: papayawhip;
-  background-color: brown;
+.colorful-theme {
+  background-color: pink;
+  color: green;
 }
 
-input[name=color-theme] {
+/* Form Area Styling */
+fieldset {
+  border: 0;
+}
+
+.form-control {
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 30px;
 }
+
+/* Radio Button and Text Styling */
+.radio-grid {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="radio"] {
+  appearance: none;
+
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  
+  transform: translateY(0.05em);
+
+  display: grid;
+  place-content: center;
+}
+
+/* Unchecked nad Checked Radio Button Styling */
+input[type="radio"]::before {
+  content: "";
+
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 200ms transform ease-in-out;
+  box-shadow: inset 0.5em 0.5em var(--radio-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:hover {
+  outline: max(1px, 0.1em) solid currentColor;
+}
+
+/* Easy way to change size and color of checked radio button but it doesn't work on safari */
+/* input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  accent-color: green;
+} */

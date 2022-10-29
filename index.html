@@ -6,27 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Theme Change with Radio Buttons</title>
   <script src="js/client.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="base">
   <main>
-    <fieldset>
-      <legend>Select a color theme:</legend>
-      <div>
-        <input type="radio" id="dark" name="color-theme" value="dark">
-        <label for="dark">Dark</label>
-      </div>
-      <div>
-        <input type="radio" id="light" name="color-theme" value="light">
-        <label for="light">Light</label>
-      </div>
-      <div>
-        <input type="radio" id="colorful" name="color-theme" value="colorful">
-        <label for="colorful">Colorful</label>
-      </div>
-    </fieldset>
-    <h1>Hello world!</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facilis suscipit possimus dicta, eveniet quidem hic neque odit a laborum dolore, corrupti distinctio sit eum amet quia? Repellat iusto consectetur placeat assumenda veritatis non error voluptates aperiam perferendis adipisci earum, impedit cumque hic? Animi doloremque voluptate consequatur est ut molestias!</p>
+    <form action="">
+      <fieldset>
+        <legend>Select a color theme</legend>
+        <div class="radio-grid">
+          <input class= "form-control" type="radio" id="base" name="color-theme" value="base" checked>
+          <label for="base">Base</label>
+        </div>
+        <div class="radio-grid">
+          <input class= "form-control" type="radio" id="dark" name="color-theme" value="dark">
+          <label for="dark">Dark</label>
+        </div>
+        <div class="radio-grid">
+          <input class= "form-control" type="radio" id="light" name="color-theme" value="light">
+          <label for="light">Light</label>
+        </div>
+        <div class="radio-grid">
+          <input class= "form-control" type="radio" id="colorful" name="color-theme" value="colorful">
+          <label for="colorful">Colorful</label>
+        </div>
+      </fieldset>
+    </form>
+    <h1>Color Change Test!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facilis suscipit possimus dicta, eveniet quidem hic neque odit a laborum dolore, corrupti distinctio sit eum amet quia? Repellat iusto consectetur placeat assumenda veritatis non error voluptates aperiam perferendis adipisci earum, impedit cumque hic?</p>
   </main>
 </body>
 </html>

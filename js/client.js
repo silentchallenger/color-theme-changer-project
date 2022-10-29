@@ -1,31 +1,40 @@
 'use strict';
 
-// Create form element variables
-
-// Radio
-const darkColor = document.querySelector("input[value=dark]")
-
-const lightColor = document.querySelector("input[value=light]")
-
-const colorfulColor = document.querySelector("input[value=colorful]")
-
-// Create body variable
 const body = document.querySelector('body');
 
+const form = document.querySelector("form");
 
+const baseStyle = body.getAttribute("class");
+
+// To set radio button color
+const root = document.querySelector(':root');
+const radioColor = function () {
+  root.style.setProperty("--radio-color", window.getComputedStyle(body).color)
+}
+// TODO: Create random light, dark, colorful colors to change it randomly rather than pre-made color themes
+
+// Color Theme Selection Function
 const colorTheme = function() {
-  if (darkColor.checked) {
-    body.className = "";
+  if (form.base.checked) {
+    body.className = baseStyle;
+    radioColor();
+  } else if (form.dark.checked) {
+    body.className = baseStyle;
     body.classList.add("dark-theme")
-  } else if (lightColor.checked) {
-    body.className = "";
+    radioColor();
+  } else if (form.light.checked) {
+    body.className = baseStyle;
     body.classList.add("light-theme")
+    radioColor();
   } else {
-    body.className = "";
+    body.className = baseStyle;
     body.classList.add("colorful-theme")
+    radioColor();
   }
 }
 
-darkColor.addEventListener("click", colorTheme);
-lightColor.addEventListener("click", colorTheme);
-colorfulColor.addEventListener("click", colorTheme);
+// Event Handlers
+form.base.addEventListener("click", colorTheme);
+form.dark.addEventListener("click", colorTheme);
+form.light.addEventListener("click", colorTheme);
+form.colorful.addEventListener("click", colorTheme);

@@ -15,6 +15,5 @@ I chose the following
 - [window.getComputedStyle()](https://gomakethings.com/three-simple-ways-to-get-and-set-css-properties-with-vanilla-javascript/)
 - [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 - [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
-- [Usage of className to remove classes on elements](https://bobbyhadz.com/blog/javascript-remove-all-classes-from-element)
 - [Google Fonts](https://fonts.google.com/)
     - [Roboto](https://fonts.google.com/specimen/Roboto)
